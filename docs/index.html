@@ -1,1 +1,159 @@
-<h1>Hello World 1!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madhyamakist</title>
+  <link rel="icon" href="logo.png" type="image/png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #e0e0e0;
+      background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Animated Background */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, #2e2e2e, #1e1e1e, #3a3a3a);
+      animation: gradientShift 10s infinite alternate;
+      z-index: -1;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        transform: scale(1) rotate(0deg);
+      }
+      50% {
+        transform: scale(1.5) rotate(180deg);
+      }
+      100% {
+        transform: scale(1) rotate(360deg);
+      }
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      background: url('logo.png') no-repeat center center;
+      background-size: contain;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    /* Main Content */
+    main {
+      animation: slideIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 20px 0;
+      background: linear-gradient(90deg, #d3d3d3, #a9a9a9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGlow 3s infinite alternate;
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 10px #d3d3d3, 0 0 20px #a9a9a9, 0 0 30px #6e6e6e;
+      }
+      100% {
+        text-shadow: 0 0 20px #d3d3d3, 0 0 30px #a9a9a9, 0 0 40px #6e6e6e;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #c0c0c0;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #a0a0a0;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"></div>
+  </header>
+  <main>
+    <h1>Welcome to Madhyamakist</h1>
+    <p>
+      At Madhyamakist we are changing how the world "works". By centring our philosophy around the effort to strive balance between production and consumption.
+    </p>
+    <br/>
+    <p>
+      We are a collective of software developers, designers, and thinkers who believe in the power of technology to create a better world. Our mission is to build tools and platforms that empower individuals and communities, fostering a more equitable and sustainable future.
+    </p>
+  </main>
+  <footer>
+    &copy; 2025 Madhyamakist Co. All rights reserved.
+  </footer>
+</body>
+</html>
